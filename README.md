@@ -13,7 +13,7 @@ After deployment you should have a proxy api gateway where any url hits a lambda
 
 # The CloudWatch Dashboard
 
-![Example Dashboard](img/dashboard.png)
+![Example Dashboard](https://github.com/AymanZahran/serverless/blob/main/the-cloudwatch-dashboard/python/img/dashboard.png)
 
 This is a project that has been configured with a well architected CloudWatch dashboard for the simple webservice stack (API Gateway HTTP API, Lambda Function and DynamoDB). It also includes multiple alerts which send messages to an SNS Topic.
 
