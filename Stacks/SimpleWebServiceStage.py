@@ -2,7 +2,8 @@ from constructs import Construct
 from aws_cdk import (
     Stage
 )
-from ..Stacks.SimpleWebServiceStack import SimpleWebServiceStack
+
+from SimpleWebServiceStack import SimpleWebServiceStack
 
 class SimpleWebServiceStage(Stage):
 

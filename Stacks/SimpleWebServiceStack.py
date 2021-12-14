@@ -5,8 +5,7 @@ from aws_cdk import (
     aws_apigateway as apigw,
 )
 
-from ..Constructs.hitcounter import HitCounter
-
+from HitCounterConstruct import HitCounter
 
 class SimpleWebServiceStack(Stack):
 

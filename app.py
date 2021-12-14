@@ -5,7 +5,6 @@ import aws_cdk as cdk
 
 from Stacks.cdkPipelineStack import cdkPipelineStack
 
-
 app = cdk.App()
 cdkPipelineStack(app, "cdkPipelineStack")
 

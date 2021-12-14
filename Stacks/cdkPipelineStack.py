@@ -6,7 +6,7 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-from ..Stages.SimpleWebServiceStage import SimpleWebServiceStage
+from SimpleWebServiceStage import SimpleWebServiceStage
 
 class cdkPipelineStack(Stack):
 
