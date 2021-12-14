@@ -44,7 +44,7 @@ Some useful References:
 * [TypeScript](typescript)
 * [Python](python)
 
-![AWS Well Architected](img/well_architected.png)
+![AWS Well Architected](https://github.com/AymanZahran/serverless/raw/main/the-cloudwatch-dashboard/python/img/well_architected.png)
 
 The [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/) Framework helps you understand the pros and cons of
 decisions you make while building systems on AWS. By using the Framework, you will learn architectural best practices for designing and operating reliable, secure, efficient, and cost-effective systems in the cloud. It provides a way for you to consistently measure your architectures against best practices and identify areas for improvement.
