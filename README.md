@@ -239,7 +239,7 @@ This is another very important part of CloudWatch to understand. Every metric su
 
 Take this example from DynamoDB, you can use Maximum, Minimum or Average for your statistic and they all provide you a different view on the data
 
-![statistics](img/statistics.png)
+![statistics](https://github.com/AymanZahran/serverless/raw/main/the-cloudwatch-dashboard/python/img/statistics.png)
 
 There are also [percentile statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Percentiles)
 
