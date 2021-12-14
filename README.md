@@ -41,8 +41,7 @@ Some useful References:
 
 ## Available Versions
 
-* [TypeScript](typescript)
-* [Python](python)
+* [Python](https://github.com/AymanZahran/cdkPipelines-SimpleWebService-cwDashboard/)
 
 ![AWS Well Architected](https://github.com/AymanZahran/serverless/raw/main/the-cloudwatch-dashboard/python/img/well_architected.png)
 
