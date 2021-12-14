@@ -1,12 +1,21 @@
+# The Simple Webservice
 
-# Welcome to your CDK Python project!
+This is an example CDK stack to deploy The Simple Webservice stack described by Jeremy Daly here - https://www.jeremydaly.com/serverless-microservice-patterns-for-aws/#simplewebservice
 
-This is a blank project for Python development with CDK.
+Most of this code was borrowed from https://www.cdkworkshop.com
+
+This is the most basic of implementations and would have to be hardened before production use. e.g. cognito added to the API Gateway
+
+![Architecture](img/architecture.png)
+
+After deployment you should have a proxy api gateway where any url hits a lambda which inserts a record of the url into a dynamodb with a count of how many times that url has been visited. 
+
+# CDK Python Useful Commands
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
+process also creates a virtualenv within this project, stored under the .env
 directory.  To create the virtualenv it assumes that there is a `python3`
 (or `python` for Windows) executable in your path with access to the `venv`
 package. If for any reason the automatic creation of the virtualenv fails,
@@ -15,20 +24,20 @@ you can create the virtualenv manually.
 To manually create a virtualenv on MacOS and Linux:
 
 ```
-$ python3 -m venv .venv
+$ python -m venv .env
 ```
 
 After the init process completes and the virtualenv is created, you can use the following
 step to activate your virtualenv.
 
 ```
-$ source .venv/bin/activate
+$ source .env/bin/activate
 ```
 
 If you are a Windows platform, you would activate the virtualenv like this:
 
 ```
-% .venv\Scripts\activate.bat
+% .env\Scripts\activate.bat
 ```
 
 Once the virtualenv is activated, you can install the required dependencies.
