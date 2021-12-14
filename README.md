@@ -10,6 +10,7 @@ This is the most basic of implementations and would have to be hardened before p
 
 After deployment you should have a proxy api gateway where any url hits a lambda which inserts a record of the url into a dynamodb with a count of how many times that url has been visited. 
 
+
 # The CloudWatch Dashboard
 
 ![Example Dashboard](img/dashboard.png)
@@ -199,17 +200,17 @@ If you want to use some of the out of the box metrics you need to know the names
 
 Something that is very powerful in CloudWatch is that you can write mathematical expressions based off existing metrics to create a new metric. I have done this several times to produce this dashboard:
 
-```javascript
-// Gather the % of lambda invocations that error in past 5 mins
-let dynamoLambdaErrorPercentage = new cloudwatch.MathExpression({
-    expression: 'e / i * 100',
-    label: '% of invocations that errored, last 5 mins', 
-    usingMetrics: {
-        i: dynamoLambda.metric("Invocations", {statistic: 'sum'}),
-        e: dynamoLambda.metric("Errors", {statistic: 'sum'}),
-    },
-    period: cdk.Duration.minutes(5)
-});
+```python
+# Gather the % of lambda invocations that error in past 5 mins
+lambda_error_perc = cloud_watch.MathExpression( expression="e / i * 100",
+                                                label="% of invocations that errored, last 5 mins",
+                                                using_metrics={
+                                                    "i": dynamo_lambda.metric(metric_name="Invocations",
+                                                                              statistic="sum"),
+                                                    "e": dynamo_lambda.metric(metric_name="Errors",
+                                                                              statistic="sum"),
+                                                },
+                                                period=core.Duration.minutes(5))
 ```
 
 You can see that we took the invocations metric and gave it a name "i" and the errors metric "e" then applied the formula "e / i * 100" to produce the % of invocations that errored.
@@ -243,6 +244,7 @@ Take this example from DynamoDB, you can use Maximum, Minimum or Average for you
 There are also [percentile statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Percentiles)
 
 ```A percentile indicates the relative standing of a value in a dataset. For example, the 95th percentile means that 95 percent of the data is lower than this value and 5 percent of the data is higher than this value. Percentiles help you get a better understanding of the distribution of your metric data.```
+
 
 
 # CDK Python Useful Commands
