@@ -3,7 +3,7 @@ from aws_cdk import (
     Stage
 )
 
-from SimpleWebServiceStack import SimpleWebServiceStack
+from .SimpleWebServiceStack import SimpleWebServiceStack
 
 class SimpleWebServiceStage(Stage):
 
